@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#navbar{
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(76, 38, 76);
+    color: aliceblue;
+    font-size: 1.35vw;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+}
+#navbar h1{
+    padding-left: 5px;
+}
+
+#Sec{
+    width: 100%;
+    height: 70vh;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Ques{
+    position: relative;
+    height: 40vh;
+    width: 25vw;
+    border: 2px solid rgb(203, 199, 199);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Caprasimo', cursive;
+    font-size: 1vw;
+    font-weight: 400;
+    padding: 10px;
+}
+#Game{
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    /* background-color: rgb(235, 235, 175); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.GameContainer{
+    display: grid;
+    grid-template-columns: repeat(3,8vw);
+    grid-template-rows: repeat(3,14vh);
+    /* border: 1px solid red; */
+    position: relative;
+}
+.box{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3vw;
+}
+.box:hover{
+    background-color: rgb(254, 176, 254);
+    cursor: pointer;
+}
+.GameInfo{
+    margin-left: 4vw;
+}
+#reset{
+    padding: 0.5vw;
+    font-size: 1vw;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+    margin-left: 4px;
+    cursor: pointer;
+}
+.bt-0{
+    border-top: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+
+#win{
+    height: 15vh;
+    width: 9vw;
+}
+#WinInfo{
+    opacity: 0;
+    transition: all;
+    transition-duration: 1.5s;
+    padding-top: 2vh;
+    font-family: 'Lobster', cursive;
+}
+#line{
+    width: 16vw;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    opacity: 0;
+    transition: 'opacity';
+    transition-duration: 0.5s;
+}
+
+
+@media screen and (max-width: 800px) {
+    .GameContainer{
+        grid-template-columns: repeat(3,5vw);
+        grid-template-rows: repeat(3,6vh);
+    }
+    #Game{
+        flex-direction: column;
+    }
+    #WinInfo{
+        font-size: 2vw;
+    }
+    #win{
+        height: 7vh;
+        width: 5vw;   
+    }
+    #Ques h2{
+        width: 25vw;
+    }
+}
+@media screen and (max-width: 1485px) {
+    #line{
+        display: none;
+    }
+}
